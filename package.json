@@ -10,11 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@splinetool/react-spline": "^4.0.0",
     "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9",
-    "three": "^0.172.0",
-    "three.js": "^0.77.1"
+    "nodemon": "^3.1.9"
   }
 }
