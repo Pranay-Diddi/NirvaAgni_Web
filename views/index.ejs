@@ -36,6 +36,12 @@
             height: 3rem;
             color: #007bff; 
         }
+
+        .full-size-video {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
         #google_translate_element {
             position: absolute;
             top: 80px;
@@ -44,7 +50,7 @@
         }
         
     </style>
-      <script type="text/javascript">
+    <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
@@ -87,6 +93,22 @@
                         </spline-viewer>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-Size Video Section -->
+    <section class="video-section">
+        <div class="container-fluid">
+            <div class="ratio ratio-16x9"> <!-- Bootstrap aspect ratio utility -->
+                <iframe 
+                    class="full-size-video" 
+                    src="https://www.youtube.com/embed/ppQ95qvBmH8?si=1swvVZ2k64cmJQKj&autoplay=1&mute=1&loop=1&playlist=ppQ95qvBmH8" 
+                    title="Nirva-Agni Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>
