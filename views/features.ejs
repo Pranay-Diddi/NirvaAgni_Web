@@ -11,20 +11,20 @@
         .spline-3d-container {
             display: flex;
             justify-content: center;
-            align-items: flex-end; 
-            height: 500px;
+            align-items: center;
+            height: 700px; 
             position: relative;
         }
-        
+
         .hero-image {
-            width: 80%; 
-            height: 400px; 
+            width: 90%; 
+            height: 800px;
             position: absolute;
-            bottom: 200px; 
-            left: 400px; 
-            transform: translateY(-30px); 
+            bottom: -60px; 
+            left: 100px; 
+            transform: translateY(-30px);
         }
-        
+
         .title-section {
             padding: 50px 0;
             background-color: #343a40;
@@ -35,6 +35,20 @@
             background-color: #343a40;
             color: white;
             padding: 50px 0;
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            color: #007bff; 
         }
     </style>
 </head>
@@ -76,11 +90,15 @@
             </div>
         </section>
     
-    
-        
         <!-- Spline 3D Model -->
         <section class="spline-3d-container my-5">
             <div class="hero-image">
+                <div id="loadingSpinner" class="loading-spinner">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
                 <spline-viewer 
                     url="https://prod.spline.design/HRFmVj4-oLGJehrU/scene.splinecode" 
                     style="width: 100%; height: 100%; border: none;" 
@@ -90,6 +108,7 @@
             </div>
         </section>
     </main>
+
     <section class="cta text-center py-5 bg-dark">
         <h2 class="fw-bold mb-3">Ready to Experience Cutting-Edge Fire Safety?</h2>
         <a href="/contact" class="btn btn-primary btn-lg">Contact Us Today</a>
@@ -103,6 +122,19 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        function hideSpinner() {
+            setTimeout(() => {
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }, 3000); 
+        }
+
+        window.onload = hideSpinner; 
+
+        const viewer = document.querySelector('spline-viewer');
+        viewer.addEventListener('load', hideSpinner); 
+    </script>
+
+    <script>
         const observerOptions = {
             root: null,
             rootMargin: '10px',
@@ -113,13 +145,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
-                    observer.unobserve(entry.target); // Stop observing once animation is triggered
+                    observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
     
-        // Observe all elements with animate-on-scroll class
-        document.addEventListener('DOMContentLoaded', () => AOS.init());
         document.addEventListener('DOMContentLoaded', () => {
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             animatedElements.forEach(el => observer.observe(el));
