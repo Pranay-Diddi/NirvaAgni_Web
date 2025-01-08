@@ -3,7 +3,7 @@ main {
     height: calc(100% + 10vh);
     background: linear-gradient(to right, #141e30, #243b55);
     color: white;
-    padding-bottom: 100vh;
+    padding-bottom: 10vh;
 }
 
 
