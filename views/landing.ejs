@@ -8,392 +8,8 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   rel="stylesheet"
 />
-
-  <style>
-    /* General Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      color: white;
-      text-align: center;
-    }
-
-    #background-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1; /* Ensure the video stays behind the content */
-    }
-
-    .navbar {
-      background: black;
-    }
-
-    header .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-    }
-
-    header .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    header nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    header nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-    }
-
-    header nav ul li a:hover {
-      color: #007bff;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 100px 20px;
-      background: radial-gradient(circle at center, #001f4d, black);
-      color: white;
-      margin-bottom: 30px;
-    }
-    
-    .hero h2 {
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-
-    .hero .tagline h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
-    }
-
-    .hero .tagline p {
-      font-size: 1rem;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #dcdcdc;
-    }
-
-    /* Mission Section */
-    .mission {
-      background: url('/images/robot.png') no-repeat center center / cover;
-      padding: 150px 20px;
-      color: white;
-      position: relative;
-    }
-
-    .mission::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: inherit; /* Use the same background image */
-      filter: blur(5px);  /* Add blur effect to the background */
-      z-index: 0;
-    }
-
-    .mission-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      backdrop-filter: none; /* Ensure text is clear */
-    }
-
-    .projects {
-        background: linear-gradient(to bottom, #001f4d, black);
-        padding: 100px 20px;
-        color: white;
-        text-align: center;
-      }
-
-      .projects h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-      }
-
-      .project-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px; /* Space between text and image */
-        max-width: 90%; /* Take around 90% width on desktop */
-        margin: 0 auto; /* Center the content */
-        flex-wrap: wrap; /* Ensure responsiveness */
-      }
-
-      .project-description {
-        max-width: 50%;
-        text-align: left;
-      }
-
-      .project-description h3 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-      }
-
-      .project-description p {
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .project-image img {
-        max-width: 100%; /* Make the image responsive */
-        max-height: 300px; /* Limit the image height */
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      }
-  
-
-    /* Responsive Design */
-
-    .learn-more {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .learn-more:hover {
-      background-color: #0056b3;
-    }
-
-    .founders {
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-      position: relative;
-    }
-
-    .founder-title {
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
-
-/* Adjust Founder Cards */
-    .founder-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px; /* Increase padding */
-      border-radius: 15px;
-      text-align: center;
-      width: 350px; /* Increase width */
-      height: 400px; /* Increase height */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-/* Adjust Founder Images */
-    .founder-card img {
-      width: 180px; /* Larger image */
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-
-    /* Line Between Cards */
-    .founders-cards {
-      display: flex;
-      justify-content: center;
-      gap: 200px;
-      position: relative;
-    }
-
-    .founders-cards::before {
-      content: '';
-      position: absolute;
-      top: 50%; 
-      left: 0; 
-      right: 0; 
-      /* margin: 0 auto; 
-      width: calc(23% - 80px); 
-      height: 1px;  */
-      background-color: white;
-      z-index: 0;
-    }
-
-
-
-      .founders-message {
-        margin-top: 40px;
-        font-size: 1.2rem;
-        line-height: 1.3;
-        color: white;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-    .stay-updated {
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .stay-updated .light-icon img {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-
-    .stay-updated h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      .social-icons a img {
-        width: 75px;
-        height: 75px;
-        transition: transform 0.3s ease;
-      }
-
-      .social-icons a img:hover {
-        transform: scale(1.2);
-      }
-
-      .contact-box {
-        width: 500px;
-        height: 450px;
-        margin: 0 auto;
-        border-radius: 30px;
-        background: linear-gradient(to bottom, black 40%, #003399 100%);
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .get-in-touch {
-        text-align: center;
-        padding: 100px 0;
-        background: linear-gradient(to bottom, #000000, #020c1b 30%, #05205f 70%, #052f9c);
-        background-size: cover;
-        position: relative;
-        color: white;
-        font-family: Arial, sans-serif;
-      }
-
-      .get-in-touch::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('stars.png') repeat;
-        opacity: 0.2; /* Adjust the opacity for a subtle star effect */
-        pointer-events: none;
-      }
-
-      .get-in-touch h2 {
-        font-size: 2rem;
-        letter-spacing: 4px;
-        margin-bottom: 40px;
-      }
-
-
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-      }
-
-      .hero .tagline h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero .tagline p {
-        font-size: 0.9rem;
-      }
-
-      .mission h2 {
-        font-size: 1.4rem;
-      }
-
-      .mission p {
-        font-size: 0.9rem;
-      }
-
-      .project-card {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .project-description {
-        text-align: center;
-      }
-    }
-
-
-    @media (max-width: 768px) {
-      .project-card {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .project-description {
-        max-width: 100%;
-        text-align: center;
-      }
-    }
-
-  
-
-    .mission h2  {
-      margin-bottom: 25px;
-      font-size: 2rem;
-    }
-
-    .mission p{
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .vatrix {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-    
-
-
-    
-  </style>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/landing.css">
 </head>
 <body>
 
@@ -404,7 +20,13 @@
 
   <header>
     <div class="navbar">
-      <div class="logo">VATRIX</div>
+      <div class="logo">
+        <span>V</span>
+        <span>A</span>
+        <span>T</span>
+        <span>R</span>
+        <span>I</span>
+        <span>X</span></div>
       <nav>
         <ul>
           <li><a href="#hero">MISSION</a></li>
@@ -417,7 +39,7 @@
   </header>
 
   <h2 class="vatrix">VISION AI & TECH ROBOTICS</h2>
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" data-aos="fade-up">
     
     <div class="tagline">
       <h1>"Where Machines See, Think and Act"</h1>
@@ -425,7 +47,7 @@
     </div>
   </section>
 
-  <section class="mission" id="mission">
+  <section class="mission" id="mission" data-aos="fade-left">
     <div class="mission-content">
       <h2>MISSION</h2>
       <p>We create advanced AI-powered robots designed for safety, security, and real-life guardianship. We specialize in robotic arms and autonomous systems that protect and assist humans in critical situations. Our vision combines cutting-edge technology with intelligent solutions to redefine protection.</p>
@@ -434,7 +56,7 @@
 
   <section class="projects" id="projects">
     <h2>OUR PROJECTS</h2>
-    <div class="project-card">
+    <div class="project-card "data-light>
       <div class="project-description">
         <h3>NIRVA-AGNI</h3>
         <p>NIRVA-AGNI is an AI-based fire-extinguishing robotic arm that detects and extinguishes fires in real-time. It automatically sprays water and sends instant alerts with images to occupants and authorities. This system provides 24/7 fire protection, improves safety, reduces damage, and requires minimal human intervention as it is placed on top of the roof.</p>
@@ -446,7 +68,7 @@
     </div>
   </section>
 
-  <section class="founders" id="founders">
+  <section class="founders" id="founders" data-aos="zoom-in">
     <h2 class="founder-title">FOUNDERS</h2>
     <div class="founders-cards">
       <div class="founder-card">
@@ -488,7 +110,16 @@
     <div class="contact-box"></div>
   </section>
   
-  
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: 'ease-out', // Easing function
+      once: true, // Whether animation should happen only once
+      anchorPlacement: 'top-bottom', // Defines when the animation should trigger
+    });
+  </script>
+
   
 </body>
 </html>
