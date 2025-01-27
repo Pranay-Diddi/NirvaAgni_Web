@@ -48,11 +48,17 @@ header nav ul li a {
     color: white;
     font-size: 0.9rem;
     letter-spacing: 1px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+
 }
 
+
 header nav ul li a:hover {
-    color: #007bff;
+    transform: scale(1.1);
+    color: #f39c12;
 }
+
 
 .hero {
     padding: 100px 20px;
@@ -88,6 +94,8 @@ header nav ul li a:hover {
     position: relative;
 }
 
+
+
 .mission::before {
     content: '';
     position: absolute;
@@ -109,30 +117,58 @@ header nav ul li a:hover {
     backdrop-filter: none;
 }
 
+.mission {
+    transform: scale(0.8); /* Initially smaller */
+    opacity: 0; /* Hidden at first */
+    animation: zoomIn 1.5s ease-out forwards; /* Apply zoom-in animation */
+  }
+  
+  /* Keyframes for zoom-in effect */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8); /* Start smaller */
+      opacity: 0; /* Fully transparent */
+    }
+    to {
+      transform: scale(1); /* End at normal size */
+      opacity: 1; /* Fully visible */
+    }
+  }
+
 .projects {
-    background: linear-gradient(to bottom, #001f4d, black);
+    /* background: linear-gradient(to bottom, #001f4d, black); */
+
     padding: 100px 20px;
     color: white;
     text-align: center;
 }
-
-.projects h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
+.projects {
+    width: 99%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 50px 20px; /* Add padding for spacing */
+    color: #ffffff; /* Ensure text is readable */
+    border-radius: 15px; /* Add a subtle border radius for style */
 }
+
+
 
 .project-card {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    max-width: 90%;
-    margin: 0 auto;
+    min-width: 90%;
     flex-wrap: wrap;
+    background: conic-gradient(from 180deg at 99% 30%, rgba(73, 118, 233, 0.18) -2.47deg, #316bff 1.81deg, #032886 76.1deg, rgba(19, 22, 26, 0.13) 121.11deg, rgba(7, 11, 22, 0) 300.72deg, rgba(0, 0, 0, 0) 349.73deg, rgba(73, 118, 233, 0.18) 357.53deg, #316bff 361.81deg);
+    background-size: cover; /* Ensures it covers the entire section */
+    background-repeat: no-repeat;
 }
 
 .project-description {
-    max-width: 50%;
+    max-width: 60%;
     text-align: left;
 }
 
@@ -167,6 +203,64 @@ header nav ul li a:hover {
 .learn-more:hover {
     background-color: #0056b3;
 }
+
+.projects {
+    width: 100%;
+    /* margin: 0 auto;  */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    padding: 50px 20px; /* Add padding for spacing */
+  /* background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(73, 118, 233, 0.18) -2.47deg,
+    #316bff 1.81deg,
+    #032886 76.1deg,
+    rgba(19, 22, 26, 0.13) 121.11deg,
+    rgba(7, 11, 22, 0) 300.72deg,
+    rgba(0, 0, 0, 0) 349.73deg,
+    rgba(73, 118, 233, 0.18) 357.53deg,
+    #316bff 361.81deg
+  ); */
+  color: #ffffff; /* Ensure text is readable */
+
+  }
+  
+  .project-card {
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 2rem; 
+    padding: 1.5rem; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .project-description {
+    flex: 1; /* Takes available space on the left */
+    margin-left: 25px;
+  }
+  
+  .project-image {
+    flex: 0.5; /* Takes less space on the right */
+  }
+  
+  .project-description h3 {
+    position: relative; /* Allows adding a line below */
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 25px;
+  }
+  
+  .project-description h3::after {
+    content: ""; /* Empty content for the line */
+    display: block;
+    width: 50%; /* Adjust width of the line */
+    height: 1.5px; /* Thickness of the line */
+    background: #ffff; /* Line color */
+    margin-top: 0.5rem;
+  }
+  
 
 .founders {
     color: white;
@@ -448,6 +542,7 @@ header nav ul li a:hover {
     font-weight: bold;
     letter-spacing: 2px;
     color: white;
+    animation: slide-in-left 1.5s ease-out;
   }
   
   /* Each letter animation */
@@ -457,34 +552,18 @@ header nav ul li a:hover {
     opacity: 0; /* Start fully transparent */
     animation: slide-from-left 0.5s ease-out forwards; /* Smooth slide animation */
   }
-  
-  /* Add delays for sequential animation */
-  .logo span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  
-  .logo span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  
-  .logo span:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-  
-  .logo span:nth-child(4) {
-    animation-delay: 0.6s;
-  }
-  
-  .logo span:nth-child(5) {
-    animation-delay: 0.8s;
-  }
-  
-  .logo span:nth-child(6) {
-    animation-delay: 1s;
-  }
 
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   
-  /* Keyframes for the cool animation */
 @keyframes trendy-fade-up {
     0% {
       transform: translateY(30px) scale(0.9); /* Slightly below and scaled down */
