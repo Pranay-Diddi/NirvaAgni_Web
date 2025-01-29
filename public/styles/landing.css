@@ -423,6 +423,10 @@ header nav ul li a:hover {
     .project-description {
         text-align: center;
     }
+
+    .mission {
+      background: url('/images/robot.png') no-repeat center center / cover;
+    }
 }
 
 @media (max-width: 768px) {
@@ -434,6 +438,20 @@ header nav ul li a:hover {
     .project-description {
         max-width: 100%;
         text-align: center;
+    }
+
+    .founders-cards {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .founder-card {
+      width: 99%;
+    }
+
+    .contact-box {
+      width: 95%;
     }
 }
 
