@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js" async></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Fullscreen video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Center the Spline viewer */
+        spline-viewer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay muted loop>
+        <source src="images/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Spline Viewer -->
+    <spline-viewer 
+        loading-anim-type="spinner-big-light" 
+        url="https://prod.spline.design/YDk3OHEwtxBupIE3/scene.splinecode">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAANCAYAAADISGwcAAAG1El..." 
+             alt="Spline preview" 
+             style="width: 100%; height: 100%;" />
+    </spline-viewer>
+</body>
+</html>
