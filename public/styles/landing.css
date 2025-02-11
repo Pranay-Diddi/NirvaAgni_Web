@@ -560,7 +560,7 @@ header nav ul li:nth-child(4) {
   font-weight: bold;
   letter-spacing: 2px;
   color: white;
-  animation: slide-in-left 1.5s ease-out;
+  /* animation: trendy-fade-up 1.5s ease-out; */
 }
 
 /* Each letter animation */
