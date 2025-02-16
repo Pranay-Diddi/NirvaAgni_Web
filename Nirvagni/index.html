@@ -29,6 +29,25 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+
+	<video autoplay muted loop id="background-video">
+		<source src="/images/backgrouund.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+
+	<style>
+		#background-video {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+	</style>
+
+
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 		      <a class="navbar-brand" href="index.html"><img src="images\nirva.png" alt="Fire Icon" style="width: 80px; height: 80px;">  NIRVA-AGNI</a>
@@ -83,7 +102,7 @@
 			<div class="row slider-text align-items-center" data-scrollax-parent="true">
 			  <div class="col-md-6 col-sm-12 ftco-animate">
 				<span class="subheading">Revolutionizing<br>Fire Safety with AI</span>
-				<h1 class="mb-4">Nirva - Agni<i class="fa fa-angellist" aria-hidden="true"></i></h1>
+				<h1 class="mb-4">Nirva-Agni<i class="fa fa-angellist" aria-hidden="true"></i></h1>
 				<p class="mb-4 mb-md-5">Nirva-Agni is an AI-based fire safety system.</p>
 			  </div>
 			  <div class="col-md-6 ftco-animate">
@@ -137,7 +156,7 @@
       </div>
     </section>
 
-    <section class="ftco-intro">
+    <!-- <section class="ftco-intro">
     	<div class="container-wrap">
     		<div class="wrap d-md-flex">
 	    		<div class="info">
@@ -167,28 +186,27 @@
 	    		</div>
     		</div>
     	</div>
-    </section>
+    </section> -->
 
     <section class="ftco-about d-md-flex" id="about">
     	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
     	<div class="one-half ftco-animate">
         <div class="heading-section ftco-animate ">
-          <h2 class="mb-4">About</span> Nirva - Agni</h2>
+          <h2 class="mb-4">About</span> Nirva-Agni</h2>
         </div>
         <div>
-  				<p>NIRVA-AGNI is a device which is a two-axis robotic arm placed on top to the roof uses computer vision(camera) and deep learning algorithm to detect and extinguish fires in real time. It automatically triggers the water with less precision. The device also sends real-time alerts like message and a photo to occupants and authorities. It aims to improve fire   detection response times, minimize damage, efficiency and ensure safety with minimal human intervention. It requires less maintenance.
-				</p>
-  			</div>
+  			<p>Nirva-Agni is an advanced fire suppression system featuring a two-axis robotic arm mounted on the ceiling. It leverages computer vision and deep learning algorithms to detect and extinguish fires in real time with high accuracy. Upon detecting a fire, the system autonomously activates a water suppression mechanism, ensuring rapid response with optimized resource usage. Additionally, it sends real-time alerts, including messages and photographic evidence, to occupants and emergency authorities, enabling swift intervention. Designed for efficiency, Nirva-Agni significantly reduces fire response times, minimizes property damage, and enhances safety with minimal human intervention. Its low-maintenance design makes it a reliable and cost-effective solution for fire prevention and management.</p>
+  		</div>
     	</div>
     </section>
 
-	<section class="ftco-section ftco-services" style="color: black;">
+	<section class="ftco-section ftco-services" style="color: white;">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section ftco-animate text-center">
-					<h2 class="mb-4" style="color: black;">Our Services</h2>
-					<p>we provide the best services</p>
+					<h2 class="mb-4" style="color: white;">Our Services</h2>
+					<!-- <p>we provide the best services</p> -->
 				</div>
 			</div>
 			<div class="row">
@@ -197,8 +215,8 @@
 						<div class="icon d-flex justify-content-center align-items-center mb-5">
 							<img src="images/fire (1).png" alt="Fire Icon" style="width: 50px; height: 50px;">
 						</div>
-						<div class="media-body" style="color: black;">
-							<h3 class="heading" style="color: black;">Advanced Fire Detection</h3>
+						<div class="media-body" style="color: white;">
+							<h3 class="heading" style="color: white;">Advanced Fire Detection</h3>
 							<p>State-of-the-art fire extinguishing capabilities, ensuring rapid and effective response to fire incidents.</p>
 						</div>
 					</div>
@@ -208,8 +226,8 @@
 						<div class="icon d-flex justify-content-center align-items-center mb-5">
 							<img src="images/drops.png" alt="Water Icon" style="width: 50px; height: 50px;">
 						</div>
-						<div class="media-body" style="color: black;">
-							<h3 class="heading" style="color: black;">Precise High Water Suppression System</h3>
+						<div class="media-body" style="color: white;">
+							<h3 class="heading" style="color: white;">Precise High Water Suppression System</h3>
 							<p>The high water suppression makes it to reduce fire fastly.</p>
 						</div>
 					</div>
@@ -219,8 +237,8 @@
 						<div class="icon d-flex justify-content-center align-items-center mb-5">
 							<img src="images/robotic-arm.png" alt="Water Icon" style="width: 50px; height: 50px;">
 						</div>
-						<div class="media-body" style="color: black;">
-							<h3 class="heading" style="color: black;">Two – Axis System Robotic Arm</h3>
+						<div class="media-body" style="color: white;">
+							<h3 class="heading" style="color: white;">Two – Axis System Robotic Arm</h3>
 							<p>The two-axis method allows it to rotate in any direction and easy detection of fire.</p>
 						</div>
 					</div>
@@ -232,12 +250,11 @@
 
  
 
-	<section class="ftco-section" id="features">
+	<section class="ftco-section" id="features" style="margin-bottom: 10px; padding: 0px;">
 		<div class="container">
 		  <div class="row justify-content-center mb-5 pb-3">
 			<div class="col-md-7 heading-section ftco-animate text-center">
 			  <h2 class="mb-4">Features</h2>
-			  <p>Features of Nirva-Agni</p>
 			</div>
 		  </div>
 		  <div class="row d-flex">
@@ -246,7 +263,6 @@
 				<a class="block-20" style="background-image: url('images/image_1.jpg');">
 				</a>
 				<div class="text py-4 d-block">
-
 				  <h3 class="heading mt-2">Advanced Fire Suppression Technology</h3>
 				  <p>State-of-the-art fire extinguishing capabilities, ensuring rapid and effective response to fire incidents.</p>
 				</div>
@@ -279,7 +295,7 @@
 	  </section>
 
 
-	  <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
+	  <section class="ftco-counter img" id="section-counter" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 		  <div class="row justify-content-center">
@@ -303,15 +319,15 @@
     <section class="ftco-menu" id="viewmodel">
     	<div class="container-fluid">
     		<div class="row d-md-flex">
-	    		<div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0" style="background-image: url(images/about.jpg);">
+	    		<div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0" style="background-image: url(images/about.jpg); margin-top: 47px">
 	    		</div>
 	    		<div class="col-lg-8 ftco-animate p-md-5">
 		    		<div class="row">
 		          <div class="col-md-12 nav-link-wrap mb-5">
 		            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Straight-view</a>
+		              <!-- <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Straight-view</a> -->
 
-		              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Side-view</a>
+		              <!-- <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Side-view</a> -->
 
 		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Fire-detection</a>
 
@@ -319,6 +335,7 @@
 					  <a href="spline-view.html" class="nav-link" id="v-pills-5-tab" role="tab" aria-controls="v-pills-5" aria-selected="false">3D</a>
 
 		            </div>
+
 		          </div>
 		          <div class="col-md-12 d-flex align-items-center">
 		            
@@ -384,7 +401,6 @@
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
             <h2 class="mb-4">Technologies</h2>
-            <p>Technologies of Nirva-Agni.</p>
           </div>
         </div>
         <div class="row d-flex">
