@@ -9019,3 +9019,586 @@ textarea.form-control {
   /* @media screen and (min-width: 600px) {
       
   } */
+
+
+  .tech-card {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    /* gap: 10px; */
+  }
+
+  .img1 {
+    height: 45%;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  text-align: center;
+  width: 22rem; 
+  max-height: 100%; 
+  min-height: 100%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+
+@media (max-width: 1024px) {
+  .cards-container {
+      justify-content: center;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .cards-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%; /* Full width on small screens */
+  }
+}
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    width: 24rem;
+    height: 36rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: rgb(240, 240, 240);
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-out;
+}
+
+/* Card Content */
+.card-content {
+    position: absolute;
+    inset: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    transition: bottom 0.3s ease-out;
+}
+
+.card-content p, 
+.card-content a {
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity 0.3s ease-out;
+    position: absolute;
+}
+
+.card-content p {
+    bottom: 80px;
+    left: 30px;
+}
+
+.card-content a {
+    bottom: 40px;
+    left: 30px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover Effects */
+.card:hover h2 {
+    bottom: 220px;
+    transition: bottom 0.3s ease-out;
+}
+
+.card:hover p,
+.card:hover a {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
+}
+
+.card:hover img {
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+}
+
+/* Material Icons */
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cards-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap');
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    width: 22rem; /* Slightly smaller width */
+    height: 22rem; /* Reduced height */
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: rgb(240, 240, 240);
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensuring uniform height for all cards */
+.card img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-out;
+}
+
+/* Card Content */
+.card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: left;
+  transition: 0.3s ease-out;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.card-content p, 
+.card-content a {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    font-size: 0.9rem;
+}
+
+/* Hover Effects */
+.card:hover .card-content {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.card:hover p,
+.card:hover a {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
+}
+
+/* Button Link */
+.card-content a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Material Icons */
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cards-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-card {
+  display: grid;
+  width: 100%;
+  height: 22rem; 
+  /* Adjusted height */
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.feature-card > * {
+  grid-area: 1/1;
+  transition: .4s;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+.feature-card figcaption {
+  display: grid;
+  align-items: end;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  background: var(--c, rgba(0, 0, 0, 0.7));
+  clip-path: inset(0 var(--_i, 100%) 0 0);
+  -webkit-mask:
+      linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+  margin: -1px;
+  transition: clip-path 0.4s ease-out, color 0.3s ease-out;
+}
+
+.feature-card:hover figcaption {
+  --_i: 0%;
+  color: white;
+}
+
+.feature-card:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .features-container {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .feature-card {
+      width: 90%;
+      height: auto;
+  }
+
+  .feature-card figcaption {
+      padding: 0.75rem;
+  }
+} 
+
+
+/* Features Section Styling */
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-card {
+  display: grid;
+  width: 100%;
+  height: 22rem; /* Adjusted height */
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.feature-card > * {
+  grid-area: 1/1;
+  transition: .4s;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+/* Caption Styling */
+.feature-card figcaption {
+  display: grid;
+  align-items: end;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  background: var(--c, rgba(0, 0, 0, 0.7));
+  clip-path: inset(0 var(--_i, 100%) 0 0);
+  -webkit-mask:
+      linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+  margin: -1px;
+  transition: clip-path 0.4s ease-out, color 0.3s ease-out;
+}
+
+.feature-card:hover figcaption {
+  --_i: 0%;
+  color: white;
+}
+
+.feature-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-container {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .feature-card {
+      width: 90%;
+      height: auto;
+  }
+
+  .feature-card figcaption {
+      padding: 0.75rem;
+  }
+} */
+/* Features Section Styling */
+.features-container {
+  display: flex;  /* Ensures all cards are in a single row */
+  justify-content: center; /* Centers the cards */
+  align-items: stretch; /* Ensures all cards have the same height */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+/* Feature Card */
+.feature-card {
+  flex: 1; /* Ensures equal width */
+  max-width: 30%; /* Controls width to fit in one row */
+  height: 18rem; /* Sets a fixed height for equal alignment */
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+}
+
+/* Images */
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+/* Caption Styling */
+.feature-card figcaption {
+  display: grid;
+  align-items: end;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  background: var(--c, rgba(0, 0, 0, 0.7));
+  clip-path: inset(0 var(--_i, 100%) 0 0);
+  -webkit-mask:
+      linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+  margin: -1px;
+  transition: clip-path 0.4s ease-out, color 0.3s ease-out;
+}
+.feature-card:nth-child(2):hover figcaption {
+  opacity: 1; /* Show text when hovering */
+  clip-path: inset(0 var(--_i, 100%) 0 0);
+  transition: clip-path 0.4s ease-out, color 0.3s ease-out;
+
+}
+/* Hover Effects */
+.feature-card:hover figcaption {
+  --_i: 0%;
+  color: white;
+}
+
+.feature-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-container {
+      gap: 15px;
+  }
+
+  .feature-card {
+      max-width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+      flex-wrap: wrap; /* Allows wrapping only on smaller screens */
+      justify-content: center;
+  }
+
+  .feature-card {
+      max-width: 90%;
+      height: auto;
+  }
+}
+
+
+@media (min-width: 1024px) { /* Only affects laptop/desktop view */
+  .feature-card:nth-child(2) figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      opacity: 0; /* Initially hidden */
+    }
+
+  .feature-card:nth-child(2):hover figcaption {
+      opacity: 1; /* Show text when hovering */
+      clip-path: inset(0 var(--_i, 100%) 0 0);
+      transition: clip-path 0.4s ease-out, color 0.3s ease-out;
+
+  }
+}
+
